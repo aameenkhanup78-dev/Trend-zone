@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fffaf7">
+<title>Trendzone — Earrings for Every Moment</title>
+<style>
+:root{--ink:#241b20;--muted:#796d72;--pink:#f4dce4;--rose:#a94f70;--cream:#fffaf7;--line:#eee3e5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.announcement{background:#2b2026;color:#fff;text-align:center;padding:10px;font-size:12px;letter-spacing:1.5px}
+header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#fffaf7;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}
+.logo{font-family:Georgia,serif;font-size:29px;letter-spacing:2px;font-weight:bold}.logo span{color:var(--rose)}
+nav{display:flex;gap:30px;font-size:13px;letter-spacing:1px;text-transform:uppercase}nav a:hover{color:var(--rose)}
+.header-right{display:flex;align-items:center;gap:18px}.cart{border:1px solid var(--ink);background:transparent;padding:9px 14px;border-radius:30px;font-size:12px}
+.hero{min-height:590px;display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(110deg,#f7e8e9,#f5dce4);overflow:hidden}
+.hero-copy{padding:90px 10% 80px 14%;align-self:center}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:bold}
+h1{font-family:Georgia,serif;font-weight:normal;font-size:clamp(48px,6vw,78px);line-height:1.02;margin:20px 0}.hero-copy p{color:#6e5c64;line-height:1.8;max-width:420px;font-size:15px}
+.cta{display:inline-block;margin-top:22px;background:#2b2026;color:white;padding:16px 28px;border-radius:2px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}.cta:hover{background:var(--rose)}
+.hero-art{position:relative;min-height:520px;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#fff6f2 0,#f2d1dc 58%,#e8becd 100%)}
+.hero-art img{width:80%;height:82%;object-fit:cover;mix-blend-mode:multiply;border-radius:48% 48% 4px 4px;filter:saturate(.8)}
+.hero-stamp{position:absolute;bottom:45px;left:9%;background:#fffaf7;border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;font:14px Georgia;line-height:1.4;transform:rotate(-12deg);box-shadow:0 5px 20px #9b687322}
+section{padding:82px 7%}.section-head{text-align:center;margin-bottom:38px}.section-head h2{font:normal 42px Georgia;margin:12px 0}.section-head p{color:var(--muted);font-size:14px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.category{height:260px;position:relative;overflow:hidden;background:#f2e4e5}.category img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.category:hover img{transform:scale(1.05)}.category span{position:absolute;bottom:18px;left:18px;background:#fffaf7;padding:12px 18px;font:20px Georgia}
+.products{background:#fff}.filters{display:flex;justify-content:center;gap:10px;margin:-8px 0 32px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;padding:9px 17px;border-radius:30px;font-size:12px;color:var(--muted)}.filter.active,.filter:hover{background:#2b2026;color:white;border-color:#2b2026}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.product-card{min-width:0}.product-image{height:260px;background:#f7eff0;position:relative;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.product-card:hover img{transform:scale(1.05)}.tag{position:absolute;top:12px;left:12px;background:#fffaf7;padding:7px 10px;font-size:10px;letter-spacing:1px;text-transform:uppercase}.product-info{padding:15px 2px}.product-info h3{font:20px Georgia;margin:0 0 7px}.product-info p{font-size:12px;color:var(--muted);margin:0 0 12px}.price-row{display:flex;justify-content:space-between;align-items:center}.price{font-size:14px;font-weight:bold}.add{border:1px solid #2b2026;background:transparent;padding:8px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.7px}.add:hover{background:#2b2026;color:white}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;background:#f8ecee}.story img{width:100%;height:420px;object-fit:cover}.story h2{font:normal 45px Georgia;margin:14px 0}.story p{color:var(--muted);line-height:1.9;font-size:14px;max-width:450px}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}.perk{padding:25px 10px}.perk .symbol{font-size:27px}.perk h3{font:21px Georgia;margin:12px 0 6px}.perk p{font-size:12px;color:var(--muted)}
+.newsletter{background:#2b2026;color:white;text-align:center;padding:70px 20px}.newsletter h2{font:normal 38px Georgia;margin:10px}.newsletter p{color:#d8c9cf;font-size:13px}.newsletter form{display:flex;max-width:430px;margin:25px auto 0}.newsletter input{flex:1;min-width:0;padding:14px;border:0}.newsletter button{background:#e9c4d1;border:0;padding:0 20px;font-size:11px;letter-spacing:1px}
+footer{padding:30px 7%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:12px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#2b2026;color:white;padding:13px 20px;border-radius:30px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:9}.toast.show{opacity:1}
+@media(max-width:850px){nav{gap:13px}.hero-copy{padding:65px 8%}.product-grid{grid-template-columns:repeat(2,1fr)}.product-image{height:230px}.hero{min-height:480px}}
+@media(max-width:600px){header{height:65px;padding:0 5%}.logo{font-size:24px}nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:60px 8% 35px}.hero-art{min-height:330px}.hero-art img{width:72%;height:88%}.hero-stamp{width:80px;height:80px;font-size:12px;bottom:20px}.categories{grid-template-columns:1fr}.category{height:230px}section{padding:60px 5%}.product-grid{gap:14px}.product-image{height:190px}.product-info h3{font-size:18px}.story{grid-template-columns:1fr}.story img{height:300px}.perks{grid-template-columns:1fr}.section-head h2{font-size:35px}}
+</style>
+</head>
+<body>
+<div class="announcement">A LITTLE SPARKLE, A LOT OF STYLE · FREE SHIPPING ON ORDERS OVER ₹999</div>
+<header>
+  <a class="logo" href="#">trend<span>zone</span>.</a>
+  <nav><a href="#home">Home</a><a href="#collections">Collections</a><a href="#shop">Shop</a><a href="#about">Our Story</a></nav>
+  <div class="header-right"><button class="cart" onclick="showCart()">Bag (<span id="cart-count">0</span>)</button></div>
+</header>
+<main>
+<section class="hero" id="home" style="padding:0">
+  <div class="hero-copy"><div class="eyebrow">The everyday sparkle edit</div><h1>Little details.<br>Big statement.</h1><p>Find the pair that feels like you. From easy everyday hoops to occasion-ready sparkle, discover earrings made to make every moment yours.</p><a class="cta" href="#shop">Shop the collection</a></div>
+  <div class="hero-art"><img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85" alt="Elegant gold earrings"><div class="hero-stamp">Made to<br>shine ✦</div></div>
+</section>
+<section id="collections">
+  <div class="section-head"><div class="eyebrow">Find your style</div><h2>Shop by collection</h2><p>Something lovely for every mood and moment.</p></div>
+  <div class="categories">
+    <a class="category" href="#shop" onclick="setFilter('Hoops')"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=85" alt="Gold hoop earrings"><span>Everyday Hoops ↗</span></a>
+    <a class="category" href="#shop" onclick="setFilter('Studs')"><img src="https://images.unsplash.com/photo-1635767798638-3665a7b5b7d9?auto=format&fit=crop&w=800&q=85" alt="Elegant stud earrings"><span>Minimal Studs ↗</span></a>
+    <a class="category" href="#shop" onclick="setFilter('Statement')"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=85" alt="Statement jewellery"><span>Statement Pieces ↗</span></a>
+  </div>
+</section>
+<section class="products" id="shop">
+  <div class="section-head"><div class="eyebrow">The trend edit</div><h2>Our favourites</h2><p>Fresh finds you'll want to wear on repeat.</p></div>
+  <div class="filters">
+    <button class="filter active" onclick="setFilter('All',this)">All earrings</button><button class="filter" onclick="setFilter('Hoops',this)">Hoops</button><button class="filter" onclick="setFilter('Studs',this)">Studs</button><button class="filter" onclick="setFilter('Statement',this)">Statement</button>
+  </div>
+  <div class="product-grid" id="product-grid">
+    <article class="product-card" data-category="Hoops"><div class="product-image"><span class="tag">Bestseller</span><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=85" alt="Golden Hour Hoops"></div><div class="product-info"><h3>Golden Hour Hoops</h3><p>Lightweight · Everyday essential</p><div class="price-row"><span class="price">₹599</span><button class="add" onclick="addToBag('Golden Hour Hoops',599)">Add to bag +</button></div></div></article>
+    <article class="product-card" data-category="Studs"><div class="product-image"><span class="tag">New</span><img src="https://images.unsplash.com/photo-1635767798638-3665a7b5b7d9?auto=format&fit=crop&w=700&q=85" alt="Pearl Whisper Studs"></div><div class="product-info"><h3>Pearl Whisper Studs</h3><p>Soft shine · Classic pearl look</p><div class="price-row"><span class="price">₹449</span><button class="add" onclick="addToBag('Pearl Whisper Studs',449)">Add to bag +</button></div></div></article>
+    <article class="product-card" data-category="Statement"><div class="product-image"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85" alt="Rosé Bloom Drops"></div><div class="product-info"><h3>Rosé Bloom Drops</h3><p>Playful detail · Party favourite</p><div class="price-row"><span class="price">₹799</span><button class="add" onclick="addToBag('Rosé Bloom Drops',799)">Add to bag +</button></div></div></article>
+    <article class="product-card" data-category="Hoops"><div class="product-image"><img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=700&q=85" alt="Midnight Mini Hoops"></div><div class="product-info"><h3>Midnight Mini Hoops</h3><p>Chic and simple · Day to night</p><div class="price-row"><span class="price">₹549</span><button class="add" onclick="addToBag('Midnight Mini Hoops',549)">Add to bag +</button></div></div></article>
+  </div>
+</section>
+<section class="story" id="about">
+  <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=85" alt="Curated earrings and jewellery">
+  <div><div class="eyebrow">A little about us</div><h2>Your style.<br>Your sparkle.</h2><p>At Trendzone, we believe the right earrings can change the feel of an entire outfit. We're here for the bold days, the simple days, and every little celebration in between. Explore pieces that let your own style shine.</p><a class="cta" href="#shop">Explore earrings</a></div>
+</section>
+<section class="perks">
+  <div class="perk"><div class="symbol">✧</div><h3>Style for every day</h3><p>Easy-to-love designs for every kind of moment.</p></div>
+  <div class="perk"><div class="symbol">♡</div><h3>Packed with care</h3><p>A lovely little unboxing experience, every time.</p></div>
+  <div class="perk"><div class="symbol">↗</div><h3>Made to gift</h3><p>Find a thoughtful sparkle for someone special.</p></div>
+</section>
+<section class="newsletter"><div class="eyebrow" style="color:#e9c4d1">Stay in the loop</div><h2>A little note from Trendzone</h2><p>Be first to hear about new drops and lovely offers.</p><form onsubmit="event.preventDefault();alert('Thanks for joining Trendzone! Connect this form to your email service to collect subscribers.');"><input type="email" placeholder="Your email address" required><button type="submit">SIGN ME UP</button></form></section>
+</main>
+<footer><a class="logo" href="#">trend<span>zone</span>.</a><span>© 2026 Trendzone. All rights reserved.</span><span>Instagram · Contact · Shipping & Returns</span></footer>
+<div class="toast" id="toast">Added to your bag ✦</div>
+<script>
+let bag=[],active='All';
+function addToBag(name,price){bag.push({name,price});document.getElementById('cart-count').textContent=bag.length;const t=document.getElementById('toast');t.textContent=name+' added to your bag ✦';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+function showCart(){if(!bag.length){alert('Your bag is empty. Find a pair you love!');return}let total=bag.reduce((s,x)=>s+x.price,0);alert('YOUR TRENZONE BAG\\n\\n'+bag.map(x=>x.name+' — ₹'+x.price).join('\\n')+'\\n\\nTotal: ₹'+total+'\\n\\nDemo store: connect a checkout service to accept orders.')}
+function setFilter(cat,btn){active=cat;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase().includes(cat.toLowerCase())||(cat==='All'&&b.textContent==='All earrings')));document.querySelectorAll('.product-card').forEach(c=>c.style.display=cat==='All'||c.dataset.category===cat?'':'none')}
+</script>
+</body></html>
